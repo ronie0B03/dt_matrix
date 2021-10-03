@@ -5,7 +5,7 @@
  1. `pip install Flask`
  2. `pip install Flask-SQLAlchemy`
  3. `pip install mysqlclient`
- 4. `pip install flask-marshmallow``
+ 4. `pip install flask-marshmallow`
  5. `pip install marshmallow-sqlalchemy`
 
 ## Understanding the Repository
