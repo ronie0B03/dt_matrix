@@ -7,6 +7,14 @@
  3. `pip install mysqlclient`
  4. `pip install flask-marshmallow`
  5. `pip install marshmallow-sqlalchemy`
+ 6. `conda install numpy`
+ 7. `conda install pandas`
+ 8. `conda install -c conda-forge scikit-learn`
+
+### Create database and tables
+ 1. `python`
+ 2. `from app import db`
+ 3. `db.create_all()`
 
 ## Understanding the Repository
 ### Branches
