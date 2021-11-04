@@ -2,22 +2,22 @@
   <div class="content">
     <div class="md-layout">
       <div class="md-layout-item md-medium-size-100 md-size-66">
-        <edit-profile-form data-background-color="green"> </edit-profile-form>
+        <PredictProgramForm data-background-color="green"> </PredictProgramForm>
       </div>
-      <div class="md-layout-item md-medium-size-100 md-size-33">
-        <user-card> </user-card>
-      </div>
+      <!-- <div class="md-layout-item md-medium-size-100 md-size-33">
+        <UserCard> </UserCard>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script>
-import { EditProfileForm, UserCard } from "@/pages";
+import { PredictProgramForm, /** UserCard **/ } from "@/pages";
 
 export default {
   components: {
-    EditProfileForm,
-    UserCard,
+    PredictProgramForm,
+    // UserCard,
   },
 };
 </script>
