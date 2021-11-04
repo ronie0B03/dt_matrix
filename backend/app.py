@@ -51,7 +51,7 @@ def recommend_program():
         recommendedProgram = predict[0]
         print(predict)
 
-        return jsonify({"program: ":recommendedProgram})
+        return jsonify({"program":recommendedProgram})
     else:
         return jsonify({"program: ":'Please submit the fields first.'})
 if __name__ == "__main__":
