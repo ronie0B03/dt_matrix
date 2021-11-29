@@ -9,6 +9,8 @@ import Maps from "@/pages/Maps.vue";
 import Notifications from "@/pages/Notifications.vue";
 import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
 
+import Shifter from "@/pages/Shifter.vue";
+
 const routes = [
   {
     path: "/",
@@ -19,6 +21,11 @@ const routes = [
         path: "home",
         name: "Home",
         component: Dashboard,
+      },
+      {
+        path: "shifter",
+        name: "Shifter",
+        component: Shifter,
       },
       {
         path: "user",
