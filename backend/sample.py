@@ -14,20 +14,35 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
 #read the dataset
-DATA_CSV_FILE = pd.read_csv('data-set-shifter.csv')
+DATA_CSV_FILE = pd.read_csv('data-set-bsit.csv')
 #preparing data for training and testing
-X = pd.DataFrame(np.c_[DATA_CSV_FILE['AGE'],DATA_CSV_FILE['GENDER'], DATA_CSV_FILE['STRAND'], DATA_CSV_FILE['ADMISSION_TEST'], DATA_CSV_FILE['STATUS'], DATA_CSV_FILE['GRADE'], DATA_CSV_FILE['OLD_PROGRAM'], ], columns=['AGE','GENDER','STRAND','ADMISSION_TEST','STATUS','GRADE','OLD_PROGRAM'])
-y = DATA_CSV_FILE['NEW_PROGRAM']
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-#use decision tree classifier
-clf = DecisionTreeClassifier()
-#fit the model
-clf.fit(X_train, y_train)
-#accuracy of the model
-print(clf.score(X_test, y_test))
-#predict the input
-example_input = [[age, gender, strand, admissionScore, status, gradeGWA, oldProgram], [age, gender, strand, admissionScore, status, gradeGWA, oldProgram]]
+subjects_df = pd.DataFrame(np.c_[DATA_CSV_FILE['IT105'],DATA_CSV_FILE['IT106'], DATA_CSV_FILE['IT107'], DATA_CSV_FILE['PCM101'], DATA_CSV_FILE['MMW101'], DATA_CSV_FILE['UTS101'], DATA_CSV_FILE['PE11'], DATA_CSV_FILE['NSTP11']], columns=['IT105','IT106','IT107','PCM101','MMW101','UTS101','PE11','NSTP11'])
 
-predict = clf.predict(example_input)
-recommendedProgram = predict[0]
-print(predict)
+subjectMean = []
+subjectTitle = []
+
+subjectDictionary = {}
+
+for subject in subjects_df:
+    # print(subject)
+    subjectTitle.append(str(subject))
+    subjectMean.append(subjects_df[str(subject)].mean())
+    subjectDictionary[str(subject)] = subjects_df[str(subject)].mean()
+
+max_value = max(subjectMean)
+min_index = subjectMean.index(max_value)
+
+# print(subjectTitle[min_index])
+
+sort_subjects = sorted(subjectDictionary.items(), key=lambda x: x[1], reverse=True)
+
+firstThreeSubjects = []
+counter = 0
+print()
+for key in sort_subjects:
+    if counter == 3:
+        break
+    firstThreeSubjects.append(key[0])
+    counter+=1
+
+print(str(firstThreeSubjects))
