@@ -7,6 +7,7 @@
  3. `pip install mysqlclient`
  4. `pip install flask-marshmallow`
  5. `pip install marshmallow-sqlalchemy`
+ 6. `pip install flask_cors`
 
 ## Understanding the Repository
 ### Branches
