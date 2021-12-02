@@ -18,13 +18,23 @@
                 </md-field>
               </div>
               <div class="md-layout-item md-small-size-100 md-size-33">
-                Strand:
+                <md-field required>
+                  <label>Strand</label>
+                  <md-select v-model="strand">
+                    <md-option value="0">TVL</md-option>
+                    <md-option value="1">ABM</md-option>
+                    <md-option value="2">GAS</md-option>
+                    <md-option value="3">STEM</md-option>
+                    <md-option value="4">HUMSS</md-option>
+                  </md-select>
+                </md-field>
+                <!-- Strand:
                 <br />
                 <md-radio v-model="strand" :value="0">STEM</md-radio>
                 <md-radio v-model="strand" :value="1">TVL</md-radio>
                 <md-radio v-model="strand" :value="2">GAS</md-radio>
                 <md-radio v-model="strand" :value="3">HUMSS</md-radio>
-                <md-radio v-model="strand" :value="4">ABM</md-radio>
+                <md-radio v-model="strand" :value="4">ABM</md-radio> -->
               </div>
               <div class="md-layout-item md-small-size-100 md-size-33">
                 <md-field>
@@ -38,31 +48,72 @@
               </div>
 
               <div class="md-layout-item md-small-size-100 md-size-33">
-                Status Regular / Irregular:
+                <md-field required>
+                  <label>Status Regular / Irregular</label>
+                  <md-select v-model="status">
+                    <md-option value="0">Regular</md-option>
+                    <md-option value="1">Irregular</md-option>
+                    <md-option value="2">Dropped</md-option>
+                  </md-select>
+                </md-field>
+                <!-- Status Regular / Irregular:
                 <br />
                 <md-radio v-model="status" :value="0">Regular</md-radio>
                 <md-radio v-model="status" :value="1">Irregular</md-radio>
-                <md-radio v-model="status" :value="2">Drop</md-radio>
+                <md-radio v-model="status" :value="2">Drop</md-radio> -->
               </div>
 
               <div class="md-layout-item md-small-size-100 md-size-33">
-                Current GWA / Semester Grade:
+                <md-field required>
+                  <label>Current GWA / Semester Grade:</label>
+                  <md-select v-model="gradeGWA">
+                    <md-option value="0">Less than 2</md-option>
+                    <md-option value="1">Greater than or Equal 2</md-option>
+                  </md-select>
+                </md-field>
+                <!-- Current GWA / Semester Grade:
                 <br />
                 <md-radio v-model="gradeGWA" :value="0">Less than 2</md-radio>
                 <md-radio v-model="gradeGWA" :value="1"
                   >Greater than or Equal 2</md-radio
-                >
+                > -->
               </div>
 
               <div class="md-layout-item md-small-size-100 md-size-33">
-                Gender
+                <md-field required>
+                  <label>Gender</label>
+                  <md-select v-model="gender">
+                    <md-option value="0">Male</md-option>
+                    <md-option value="1">Female</md-option>
+                  </md-select>
+                </md-field>
+                <!-- Gender
                 <br />
                 <md-radio v-model="gender" :value="0">Male</md-radio>
-                <md-radio v-model="gender" :value="1">Female</md-radio>
+                <md-radio v-model="gender" :value="1">Female</md-radio> -->
               </div>
 
               <div class="md-layout-item md-small-size-100 md-size-33">
-                Current Program:
+                  <md-field required>
+                  <label>Current Program:</label>
+                  <md-select v-model="gender">
+                    <md-option value="0">BSIT</md-option>
+                    <md-option value="1">BIT-FOODS</md-option>
+                    <md-option value="2">BIT-AUTO</md-option>
+                    <md-option value="3">BIT-DRAFT</md-option>
+                    <md-option value="4">BIT-ELECTRICAL</md-option>
+                    <md-option value="5">BSED-ENG</md-option>
+                    <md-option value="6">BPED</md-option>
+                    <md-option value="7">BSED-GEN ED</md-option>
+                    <md-option value="8">BSBA</md-option>
+                    <md-option value="9">BS-ENTREP</md-option>
+                    <md-option value="10">HRM</md-option>
+                    <md-option value="11">COMP-ENGR</md-option>
+                    <md-option value="12">COMP</md-option>
+                    <md-option value="13">BEED</md-option>
+                  </md-select>
+                  </md-field>
+                <!-- Current Program:
                 <br />
                 <md-radio v-model="currentProgram" :value="0">BSIT</md-radio>
                 <md-radio v-model="currentProgram" :value="1"
@@ -93,7 +144,7 @@
                   >COMP-ENGR</md-radio
                 >
                 <md-radio v-model="currentProgram" :value="12">BSIE</md-radio>
-                <md-radio v-model="currentProgram" :value="13">BEED</md-radio>
+                <md-radio v-model="currentProgram" :value="13">BEED</md-radio> -->
               </div>
 
               <div class="md-layout-item md-size-100 text-right">
@@ -135,13 +186,23 @@
           <md-card-content>
             <div class="md-layout">
               <div class="md-layout-item md-small-size-100 md-size-100">
-                Program / Course:
+                <md-field required>
+                  <label>Program / Course:</label>
+                  <md-select v-model="gender">
+                    <md-option value="0">BSIT</md-option>
+                    <md-option value="1">BEED</md-option>
+                    <md-option value="2">FOODS</md-option>
+                    <md-option value="3">BAFM</md-option>
+                    <md-option value="4">COE</md-option>
+                  </md-select>
+                  </md-field>
+                <!-- Program / Course:
                 <br />
                 <md-radio v-model="forProgram" :value="0">BSIT</md-radio>
                 <md-radio v-model="forProgram" :value="1">BEED</md-radio>
                 <md-radio v-model="forProgram" :value="2">FOODS</md-radio>
                 <md-radio v-model="forProgram" :value="3">BAFM</md-radio>
-                <md-radio v-model="forProgram" :value="4">COE</md-radio>
+                <md-radio v-model="forProgram" :value="4">COE</md-radio> -->
               </div>
 
               <div class="md-layout-item md-size-100 text-right">

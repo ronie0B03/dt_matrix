@@ -17,7 +17,7 @@
               </div>
               <div class="md-layout-item md-small-size-100 md-size-33">
 
-                <!-- <md-field required>
+                <md-field required>
                   <label>Strand</label>
                   <md-select v-model="strand">
                     <md-option value="1">TVL</md-option>
@@ -26,16 +26,16 @@
                     <md-option value="4">STEM</md-option>
                     <md-option value="5">HUMSS</md-option>
                   </md-select>
-                </md-field> -->
+                </md-field>
               <br>
-              Strand:
+              <!-- Strand:
               <br>
               <br>
               <md-radio v-model="strand" :value="1">TVL</md-radio>
               <md-radio v-model="strand" :value="2">ABM</md-radio>
               <md-radio v-model="strand" :value="3">GAS</md-radio>
               <md-radio v-model="strand" :value="4">STEM</md-radio>
-              <md-radio v-model="strand" :value="5">HUMSS</md-radio>
+              <md-radio v-model="strand" :value="5">HUMSS</md-radio> -->
 
 
               </div>
