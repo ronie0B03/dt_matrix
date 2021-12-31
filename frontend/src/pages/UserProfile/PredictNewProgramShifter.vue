@@ -188,7 +188,7 @@
               <div class="md-layout-item md-small-size-100 md-size-100">
                 <md-field required>
                   <label>Program / Course:</label>
-                  <md-select v-model="gender">
+                  <md-select v-model="forProgram">
                     <md-option value="0">BSIT</md-option>
                     <md-option value="1">BEED</md-option>
                     <md-option value="2">FOODS</md-option>
@@ -291,7 +291,7 @@ export default {
 
       var config = {
         method: "post",
-        url: "http://localhost:5000/recommend-shift-program",
+        url: "http://127.0.0.1:5000/recommend-shift-program",
         headers: {},
         data: data,
       };
@@ -354,7 +354,7 @@ export default {
 
       var config = {
         method: "post",
-        url: "http://localhost:5000/check-subject-hard-time",
+        url: "http://127.0.0.1:5000/check-subject-hard-time",
         headers: {},
         data: data,
       };
